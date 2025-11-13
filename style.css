@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#dre-tabela {
+    border-collapse: collapse; /* Para que as bordas se unam */
+    margin-top: 20px;
+}
+
+#dre-tabela th, #dre-tabela td {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+}
+
+#dre-tabela th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+/* Estilo para as linhas de resultado */
+.dre-resultado {
+    font-weight: bold;
+    background-color: #e0f7fa; /* Cor clara para resultados */
+}
+.dre-item-principal{
+     background-color: #b2ebf2;
+}
+/* Estilo para o campo de input */
+#dre-tabela input[type="number"] {
+    width: 90%; /* Ocupa quase toda a coluna */
+    text-align: right;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+/* Linha de resultado final (Lucro Líquido) */
+.dre-resultado.final {
+    background-color: #b2ebf2; /* Cor mais escura para o resultado final */
+}
+
+.dre-secao-titulo{
+    background-color: #00000046;
+
+}
+/* Alinhamento dos valores calculados */
+#dre-tabela span {
+    display: block;
+    text-align: right;
+    color: #000;
+}

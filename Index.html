@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>DRE Interativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>D.R.E - Demonstração do Resultado do Exercício</h1>
+    <h2>Escreva o que se pede para obter o resultado adequado</h2>
+  <p style="margin:4px 0 12px;color:#292b2e">Para calcular a demonstração do resultado do exercicio, preencha a aba "Valor (R$) a direita com o valor desejável para completar a tabela a maneira que prefirir.</p>
+    <table id="dre-tabela" width="100%">
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th style="width: 200px;">Valor (R$)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="dre-item-principal">
+                <td> <strong> RECEITA OPERACIONAL BRUTA</strong></td> 
+                <td><input type="number" id="receitaBruta" value="0" oninput="calcularDRE()"></td>
+            </tr>
+            
+            <tr class="dre-item deducao-item">
+                <td style="padding-left: 20px;">IPI</td>
+                <td><input type="number" id="ipi" value="0" oninput="calcularDRE()"></td>
+            </tr>
+            <tr class="dre-item deducao-item">
+                <td style="padding-left: 20px;">ICMS</td>
+                <td><input type="number" id="icms" value="0" oninput="calcularDRE()"></td>
+            </tr>
+            <tr class="dre-item deducao-item">
+                <td style="padding-left: 20px;">Abatimento/descontos e devoluções</td>
+                <td><input type="number" id="abatimento" value="0" oninput="calcularDRE()"></td>
+            </tr>
+            
+            <tr class="dre-resultado">
+                <td>(=) Receita Operacional Líquida</td>
+                <td><span id="resultadoROL">0.00</span></td>
+            </tr>
+
+            <tr class="dre-item">
+                <td style="padding-left: 20px;">(-) Custo do Produto/Serviço Vendido</td>
+                <td><input type="number" id="custos" value="0" oninput="calcularDRE()"></td>
+            </tr>
+
+            <tr class="dre-resultado principal">
+                <td>(=) Lucro Bruto</td>
+                <td><span id="resultadoLucroBruto">0.00</span></td>
+            </tr>
+
+            <tr class="dre-secao-titulo">
+                <td colspan="2">(-) Despesas Operacionais</td>
+            </tr>
+            <tr class="dre-item despesa-operacional-item">
+                <td style="padding-left: 20px;">Despesas com Vendas</td>
+                <td><input type="number" id="despesasVendas" value="0" oninput="calcularDRE()"></td>
+            </tr>
+            <tr class="dre-item despesa-operacional-item">
+                <td style="padding-left: 20px;">Despesas Administrativas</td>
+                <td><input type="number" id="despesasAdm" value="0" oninput="calcularDRE()"></td>
+            </tr>
+            <tr class="dre-item despesa-operacional-item">
+                <td style="padding-left: 20px;">Despesas Financeiras</td>
+                <td><input type="number" id="despesasFin" value="0" oninput="calcularDRE()"></td>
+            </tr>
+            
+            <tr class="dre-resultado">
+                <td>(=) Lucro Operacional</td>
+                <td><span id="resultadoLucroOperacional">0.00</span></td>
+            </tr>
+            
+            <tr class="dre-item despesa-nao-operacional-item">
+                <td style="padding-left: 20px;">(-)Despesas não operacionais</td>
+                <td><input type="number" id="despesasNaoOperacionais" value="0" oninput="calcularDRE()"></td>
+            </tr>
+
+            <tr class="dre-resultado">
+                <td>(=) Lucro Antes do Imposto de Renda (LAIR)</td>
+                <td><span id="resultadoLAIR">0.00</span></td>
+            </tr>
+            
+            <tr class="dre-item imposto-participacao-item">
+                <td style="padding-left: 20px;">(-)Contribuição Social</td>
+                <td><input type="number" id="contribuicaoSocial" value="0" oninput="calcularDRE()"></td>
+            </tr>
+            <tr class="dre-item imposto-participacao-item">
+                <td style="padding-left: 20px;">(-)Impostos de Renda</td>
+                <td><input type="number" id="impostoRenda" value="0" oninput="calcularDRE()"></td>
+            </tr>
+
+            <tr class="dre-resultado">
+                <td style="padding-left: 20px;">(=) Lucro depois do imposto de Renda</td>
+                <td><span id="resultadoLucroPosImposto">0.00</span></td>
+            </tr>
+
+            <tr class="dre-secao-titulo">
+                <td colspan="2"> (-) Participações</td>
+            </tr>
+            
+            <tr class="dre-item imposto-participacao-item">
+                <td style="padding-left: 20px;">Dos administradores</td>
+                <td><input type="number" id="participacaoAdm" value="0" oninput="calcularDRE()"></td>
+            </tr>
+            <tr class="dre-item imposto-participacao-item">
+                <td style="padding-left: 20px;">Dos empregados</td>
+                <td><input type="number" id="participacaoEmp" value="0" oninput="calcularDRE()"></td>
+            </tr>
+
+            <tr class="dre-resultado final">
+                <td>(=) Lucro Líquido</td>
+                <td><span id="resultadoLucroLiquido">0.00</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script> 
+</body>
+</html>
